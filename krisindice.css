@@ -16,9 +16,11 @@
   --baul-font-body: 'Roboto Condensed', sans-serif;
 }
 
-/* Forzar limpieza de saltos no deseados de Foroactivo */
+/* Reset básico */
 .baul-container, .baul-container * {
   box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
 }
 
 .baul-container p, .baul-container br {
@@ -37,10 +39,9 @@
   font-family: var(--baul-font-body) !important;
   color: var(--baul-text-primary) !important;
   display: block !important;
-  overflow: hidden !important;
 }
 
-/* HEADER */
+/* CABECERA */
 .baul-header {
   text-align: center !important;
   padding: 30px 20px 20px 20px !important;
@@ -50,12 +51,47 @@
   position: relative !important;
 }
 
+.baul-badge {
+  position: absolute !important;
+  top: -1px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background-color: var(--baul-red-main) !important;
+  color: #ffffff !important;
+  padding: 6px 14px 8px 14px !important;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 .baul-title {
   font-family: var(--baul-font-title) !important;
-  font-size: 36px !important;
+  font-size: 38px !important;
   letter-spacing: 4px !important;
   color: var(--baul-text-bright) !important;
   text-transform: uppercase !important;
+  margin-top: 10px !important;
+}
+
+.baul-subtitle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-top: 6px !important;
+}
+
+.baul-subtitle .line {
+  height: 1px !important;
+  width: 60px !important;
+  background: linear-gradient(90deg, transparent, var(--baul-border-light), transparent) !important;
+}
+
+.baul-subtitle .star {
+  color: var(--baul-red-bright) !important;
+  font-size: 10px !important;
 }
 
 .baul-subtitle .text {
@@ -66,101 +102,151 @@
   text-transform: uppercase !important;
 }
 
-/* CONTENEDOR EN 2 COLUMNAS (TABLA BLINDADA) */
+/* ESTRUCTURA PRINCIPAL (2 COLUMNAS DE 50%) */
 .baul-body {
-  display: table !important;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 16px !important;
   width: 100% !important;
-  table-layout: fixed !important;
-  border-spacing: 15px 0 !important;
+  align-items: flex-start !important;
 }
 
-.baul-nav-grid, .baul-data-box {
-  display: table-cell !important;
-  vertical-align: top !important;
+/* COLUMNA IZQUIERDA: BOTONES (MATRIZ DE 2 COLUMNAS) */
+.baul-nav-grid {
+  flex: 1 1 50% !important;
   width: 50% !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 10px !important;
 }
 
-/* BOTONES (IZQUIERDA) */
 .baul-btn {
-  display: block !important;
-  float: left !important;
-  width: calc(50% - 6px) !important;
-  margin: 3px !important;
+  display: flex !important;
+  align-items: center !important;
   background-color: var(--baul-card-bg) !important;
   border: 1px solid var(--baul-border) !important;
-  padding: 10px 8px !important;
+  border-radius: 4px !important;
+  padding: 10px 10px !important;
   text-decoration: none !important;
   color: var(--baul-text-primary) !important;
-  border-radius: 4px !important;
+  transition: all 0.25s ease !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-.baul-btn.btn-full {
-  width: calc(100% - 6px) !important;
+.baul-btn:hover {
+  background-color: rgba(107, 20, 26, 0.4) !important;
+  border-color: var(--baul-red-bright) !important;
+  transform: translateY(-2px) !important;
 }
 
 .btn-icon {
-  display: inline-block !important;
-  width: 26px !important;
-  height: 26px !important;
-  line-height: 26px !important;
+  width: 30px !important;
+  height: 30px !important;
   background-color: var(--baul-red-main) !important;
   border-radius: 50% !important;
-  text-align: center !important;
-  color: #fff !important;
-  margin-right: 6px !important;
-  font-size: 11px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  margin-right: 8px !important;
+  flex-shrink: 0 !important;
 }
 
 .btn-text {
   font-family: var(--baul-font-title) !important;
   font-size: 12px !important;
   letter-spacing: 1px !important;
+  font-weight: 500 !important;
   text-transform: uppercase !important;
-  display: inline-block !important;
+  flex-grow: 1 !important;
 }
 
-/* CAJA DE DATOS (DERECHA) */
+.btn-arrow {
+  font-size: 10px !important;
+  color: var(--baul-red-bright) !important;
+  opacity: 0.6 !important;
+}
+
+/* BOTÓN ANCHO DEL FINAL */
+.btn-full {
+  grid-column: span 2 !important;
+}
+
+/* COLUMNA DERECHA: DATOS PERSONALES */
 .baul-data-box {
+  flex: 1 1 50% !important;
+  width: 50% !important;
   background-color: var(--baul-card-bg) !important;
   border: 1px solid var(--baul-border) !important;
   border-radius: 4px !important;
-  padding: 20px 18px !important;
+  padding: 18px 16px !important;
 }
 
 .data-box-title {
   font-family: var(--baul-font-title) !important;
   font-size: 16px !important;
-  letter-spacing: 2px !important;
+  letter-spacing: 3px !important;
   text-align: center !important;
   color: var(--baul-text-bright) !important;
   text-transform: uppercase !important;
-  margin-bottom: 12px !important;
+}
+
+.data-box-divider {
+  text-align: center !important;
+  color: var(--baul-red-bright) !important;
+  font-size: 8px !important;
+  margin: 4px 0 12px 0 !important;
+}
+
+.data-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
 }
 
 .data-item {
   display: flex !important;
   justify-content: space-between !important;
-  padding: 6px 0 !important;
+  align-items: center !important;
+  padding-bottom: 5px !important;
   border-bottom: 1px dashed rgba(122, 34, 42, 0.3) !important;
   font-size: 12px !important;
 }
 
+.data-item:last-child {
+  border-bottom: none !important;
+}
+
 .data-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
   font-family: var(--baul-font-title) !important;
+  letter-spacing: 1px !important;
   color: var(--baul-text-muted) !important;
+  font-size: 11px !important;
+}
+
+.data-label i {
+  color: var(--baul-red-bright) !important;
+  width: 14px !important;
+  text-align: center !important;
 }
 
 .data-value {
   color: var(--baul-text-bright) !important;
+  font-weight: 400 !important;
+  text-align: right !important;
 }
 
 /* FOOTER */
 .baul-footer {
   margin-top: 20px !important;
-  padding-top: 15px !important;
+  padding-top: 14px !important;
   border-top: 1px solid var(--baul-border) !important;
   text-align: center !important;
-  clear: both !important;
 }
 
 .footer-quote {
@@ -168,4 +254,12 @@
   font-size: 12px !important;
   letter-spacing: 3px !important;
   color: var(--baul-text-muted) !important;
+  text-transform: uppercase !important;
+}
+
+.footer-star {
+  display: block !important;
+  margin-top: 4px !important;
+  color: var(--baul-red-bright) !important;
+  font-size: 10px !important;
 }
