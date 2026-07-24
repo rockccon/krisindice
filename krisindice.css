@@ -9,7 +9,6 @@
   --baul-border-light: #7a222a;
   --baul-red-main: #6b141a;
   --baul-red-bright: #a3222a;
-  --baul-red-hover: #801820;
   --baul-text-primary: #e6dede;
   --baul-text-muted: #a69898;
   --baul-text-bright: #ffffff;
@@ -17,11 +16,14 @@
   --baul-font-body: 'Roboto Condensed', sans-serif;
 }
 
-/* Reset básico dentro de la tablilla */
+/* Forzar limpieza de saltos no deseados de Foroactivo */
 .baul-container, .baul-container * {
   box-sizing: border-box !important;
-  margin: 0;
-  padding: 0;
+}
+
+.baul-container p, .baul-container br {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .baul-container {
@@ -29,265 +31,141 @@
   max-width: 880px !important;
   margin: 20px auto !important;
   background-color: var(--baul-bg) !important;
-  background-image: 
-    radial-gradient(circle at 50% 0%, rgba(122, 34, 42, 0.35) 0%, transparent 70%),
-    linear-gradient(to bottom, rgba(13, 13, 14, 0.7), rgba(13, 13, 14, 0.95)) !important;
   border: 1px solid var(--baul-border) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(107, 20, 26, 0.2) !important;
-  border-radius: 4px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8) !important;
   padding: 18px !important;
   font-family: var(--baul-font-body) !important;
   color: var(--baul-text-primary) !important;
-  position: relative !important;
-  overflow: hidden !important;
   display: block !important;
+  overflow: hidden !important;
 }
 
-/* CABECERA CON ESCUDO Y TÍTULO */
+/* HEADER */
 .baul-header {
-  position: relative !important;
   text-align: center !important;
-  padding: 35px 20px 25px 20px !important;
+  padding: 30px 20px 20px 20px !important;
   background: linear-gradient(180deg, rgba(80, 15, 22, 0.6) 0%, rgba(20, 18, 20, 0.4) 100%) !important;
   border: 1px solid var(--baul-border) !important;
-  border-radius: 4px !important;
   margin-bottom: 20px !important;
-}
-
-.baul-badge {
-  position: absolute !important;
-  top: -1px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  background-color: var(--baul-red-main) !important;
-  color: #ffffff !important;
-  padding: 6px 14px 8px 14px !important;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%) !important;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  position: relative !important;
 }
 
 .baul-title {
   font-family: var(--baul-font-title) !important;
-  font-size: 38px !important;
-  font-weight: 600 !important;
+  font-size: 36px !important;
   letter-spacing: 4px !important;
   color: var(--baul-text-bright) !important;
   text-transform: uppercase !important;
-  margin-top: 10px !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
-}
-
-.baul-subtitle {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 12px !important;
-  margin-top: 6px !important;
-}
-
-.baul-subtitle .line {
-  height: 1px !important;
-  width: 60px !important;
-  background: linear-gradient(90deg, transparent, var(--baul-border-light), transparent) !important;
-}
-
-.baul-subtitle .star {
-  color: var(--baul-red-bright) !important;
-  font-size: 10px !important;
 }
 
 .baul-subtitle .text {
   font-family: var(--baul-font-title) !important;
-  font-size: 14px !important;
-  letter-spacing: 5px !important;
+  font-size: 13px !important;
+  letter-spacing: 4px !important;
   color: var(--baul-text-muted) !important;
   text-transform: uppercase !important;
 }
 
-/* CUERPO - FLEXBOX PARA EVITAR PROBLEMAS CON GRID EN FOROACTIVO */
+/* CONTENEDOR EN 2 COLUMNAS (TABLA BLINDADA) */
 .baul-body {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 20px !important;
+  display: table !important;
   width: 100% !important;
+  table-layout: fixed !important;
+  border-spacing: 15px 0 !important;
 }
 
-@media (max-width: 720px) {
-  .baul-body {
-    flex-direction: column !important;
-  }
-}
-
-/* COLUMNA IZQUIERDA: BOTONES */
-.baul-nav-grid {
-  flex: 1 1 50% !important;
+.baul-nav-grid, .baul-data-box {
+  display: table-cell !important;
+  vertical-align: top !important;
   width: 50% !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 10px !important;
-  align-content: flex-start !important;
 }
 
+/* BOTONES (IZQUIERDA) */
 .baul-btn {
-  display: flex !important;
-  align-items: center !important;
+  display: block !important;
+  float: left !important;
+  width: calc(50% - 6px) !important;
+  margin: 3px !important;
   background-color: var(--baul-card-bg) !important;
   border: 1px solid var(--baul-border) !important;
-  border-radius: 4px !important;
-  padding: 10px 12px !important;
+  padding: 10px 8px !important;
   text-decoration: none !important;
   color: var(--baul-text-primary) !important;
-  transition: all 0.25s ease !important;
-  position: relative !important;
-  width: calc(50% - 5px) !important;
-  box-sizing: border-box !important;
+  border-radius: 4px !important;
 }
 
-.baul-btn:hover {
-  background-color: rgba(107, 20, 26, 0.4) !important;
-  border-color: var(--baul-red-bright) !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(163, 34, 42, 0.25) !important;
+.baul-btn.btn-full {
+  width: calc(100% - 6px) !important;
 }
 
 .btn-icon {
-  width: 32px !important;
-  height: 32px !important;
+  display: inline-block !important;
+  width: 26px !important;
+  height: 26px !important;
+  line-height: 26px !important;
   background-color: var(--baul-red-main) !important;
   border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  color: #ffffff !important;
-  font-size: 13px !important;
-  margin-right: 10px !important;
-  flex-shrink: 0 !important;
-  transition: transform 0.25s ease !important;
-}
-
-.baul-btn:hover .btn-icon {
-  transform: scale(1.1) !important;
-  background-color: var(--baul-red-bright) !important;
+  text-align: center !important;
+  color: #fff !important;
+  margin-right: 6px !important;
+  font-size: 11px !important;
 }
 
 .btn-text {
   font-family: var(--baul-font-title) !important;
-  font-size: 13px !important;
-  letter-spacing: 1.5px !important;
-  font-weight: 500 !important;
+  font-size: 12px !important;
+  letter-spacing: 1px !important;
   text-transform: uppercase !important;
-  flex-grow: 1 !important;
+  display: inline-block !important;
 }
 
-.btn-arrow {
-  font-size: 11px !important;
-  color: var(--baul-red-bright) !important;
-  opacity: 0.6 !important;
-  transition: transform 0.25s ease, opacity 0.25s ease !important;
-}
-
-.baul-btn:hover .btn-arrow {
-  opacity: 1 !important;
-  transform: translateX(3px) !important;
-}
-
-.btn-full {
-  width: 100% !important;
-}
-
-/* COLUMNA DERECHA: DATOS PERSONALES */
+/* CAJA DE DATOS (DERECHA) */
 .baul-data-box {
-  flex: 1 1 50% !important;
-  width: 50% !important;
   background-color: var(--baul-card-bg) !important;
   border: 1px solid var(--baul-border) !important;
   border-radius: 4px !important;
   padding: 20px 18px !important;
-  display: flex !important;
-  flex-direction: column !important;
 }
 
 .data-box-title {
   font-family: var(--baul-font-title) !important;
   font-size: 16px !important;
-  letter-spacing: 3px !important;
+  letter-spacing: 2px !important;
   text-align: center !important;
   color: var(--baul-text-bright) !important;
   text-transform: uppercase !important;
-}
-
-.data-box-divider {
-  text-align: center !important;
-  color: var(--baul-red-bright) !important;
-  font-size: 8px !important;
-  margin: 6px 0 15px 0 !important;
-}
-
-.data-list {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 11px !important;
+  margin-bottom: 12px !important;
 }
 
 .data-item {
   display: flex !important;
   justify-content: space-between !important;
-  align-items: center !important;
-  padding-bottom: 6px !important;
+  padding: 6px 0 !important;
   border-bottom: 1px dashed rgba(122, 34, 42, 0.3) !important;
-  font-size: 13px !important;
-}
-
-.data-item:last-child {
-  border-bottom: none !important;
+  font-size: 12px !important;
 }
 
 .data-label {
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
   font-family: var(--baul-font-title) !important;
-  letter-spacing: 1px !important;
   color: var(--baul-text-muted) !important;
-  font-size: 12px !important;
-}
-
-.data-label i {
-  color: var(--baul-red-bright) !important;
-  width: 14px !important;
-  text-align: center !important;
-  font-size: 12px !important;
 }
 
 .data-value {
   color: var(--baul-text-bright) !important;
-  font-weight: 400 !important;
-  text-align: right !important;
 }
 
-/* PIE / CITA */
+/* FOOTER */
 .baul-footer {
   margin-top: 20px !important;
-  padding: 14px 10px !important;
+  padding-top: 15px !important;
   border-top: 1px solid var(--baul-border) !important;
   text-align: center !important;
-  position: relative !important;
+  clear: both !important;
 }
 
 .footer-quote {
   font-family: var(--baul-font-title) !important;
-  font-size: 13px !important;
-  letter-spacing: 4px !important;
+  font-size: 12px !important;
+  letter-spacing: 3px !important;
   color: var(--baul-text-muted) !important;
-  text-transform: uppercase !important;
-}
-
-.footer-star {
-  display: block !important;
-  margin-top: 6px !important;
-  color: var(--baul-red-bright) !important;
-  font-size: 10px !important;
 }
