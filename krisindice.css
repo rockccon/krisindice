@@ -64,10 +64,13 @@
 .baul-title {
   font-family: var(--baul-font-title) !important;
   font-size: 18px !important;
-  letter-spacing: 3px !important;
+  line-height: 1.1 !important;
+  letter-spacing: 2px !important;
   color: var(--baul-text-bright) !important;
   text-transform: uppercase !important;
   margin-top: 4px !important;
+  margin-bottom: 6px !important;
+  display: block !important;
 }
 
 .baul-subtitle {
