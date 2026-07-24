@@ -1,6 +1,5 @@
 /* ===================================================
    TABLILLA ÍNDICE DE BAÚL - ARCHIVO PERSONAL (FOROACTIVO)
-   Funciona perfecto en modo claro y oscuro del foro
    =================================================== */
 
 :root {
@@ -19,267 +18,276 @@
 }
 
 /* Reset básico dentro de la tablilla */
-.baul-container * {
-  box-sizing: border-box;
+.baul-container, .baul-container * {
+  box-sizing: border-box !important;
   margin: 0;
   padding: 0;
 }
 
 .baul-container {
-  width: 100%;
-  max-width: 880px;
-  margin: 20px auto;
-  background-color: var(--baul-bg);
+  width: 100% !important;
+  max-width: 880px !important;
+  margin: 20px auto !important;
+  background-color: var(--baul-bg) !important;
   background-image: 
     radial-gradient(circle at 50% 0%, rgba(122, 34, 42, 0.35) 0%, transparent 70%),
-    linear-gradient(to bottom, rgba(13, 13, 14, 0.7), rgba(13, 13, 14, 0.95));
-  border: 1px solid var(--baul-border);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(107, 20, 26, 0.2);
-  border-radius: 4px;
-  padding: 18px;
-  font-family: var(--baul-font-body);
-  color: var(--baul-text-primary);
-  position: relative;
-  overflow: hidden;
+    linear-gradient(to bottom, rgba(13, 13, 14, 0.7), rgba(13, 13, 14, 0.95)) !important;
+  border: 1px solid var(--baul-border) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(107, 20, 26, 0.2) !important;
+  border-radius: 4px !important;
+  padding: 18px !important;
+  font-family: var(--baul-font-body) !important;
+  color: var(--baul-text-primary) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: block !important;
 }
 
 /* CABECERA CON ESCUDO Y TÍTULO */
 .baul-header {
-  position: relative;
-  text-align: center;
-  padding: 35px 20px 25px 20px;
-  background: linear-gradient(180deg, rgba(80, 15, 22, 0.6) 0%, rgba(20, 18, 20, 0.4) 100%);
-  border: 1px solid var(--baul-border);
-  border-radius: 4px;
-  margin-bottom: 20px;
+  position: relative !important;
+  text-align: center !important;
+  padding: 35px 20px 25px 20px !important;
+  background: linear-gradient(180deg, rgba(80, 15, 22, 0.6) 0%, rgba(20, 18, 20, 0.4) 100%) !important;
+  border: 1px solid var(--baul-border) !important;
+  border-radius: 4px !important;
+  margin-bottom: 20px !important;
 }
 
 .baul-badge {
-  position: absolute;
-  top: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--baul-red-main);
-  color: #ffffff;
-  padding: 6px 14px 8px 14px;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute !important;
+  top: -1px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background-color: var(--baul-red-main) !important;
+  color: #ffffff !important;
+  padding: 6px 14px 8px 14px !important;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .baul-title {
-  font-family: var(--baul-font-title);
-  font-size: 38px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  color: var(--baul-text-bright);
-  text-transform: uppercase;
-  margin-top: 10px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  font-family: var(--baul-font-title) !important;
+  font-size: 38px !important;
+  font-weight: 600 !important;
+  letter-spacing: 4px !important;
+  color: var(--baul-text-bright) !important;
+  text-transform: uppercase !important;
+  margin-top: 10px !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
 }
 
 .baul-subtitle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 6px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-top: 6px !important;
 }
 
 .baul-subtitle .line {
-  height: 1px;
-  width: 60px;
-  background: linear-gradient(90deg, transparent, var(--baul-border-light), transparent);
+  height: 1px !important;
+  width: 60px !important;
+  background: linear-gradient(90deg, transparent, var(--baul-border-light), transparent) !important;
 }
 
 .baul-subtitle .star {
-  color: var(--baul-red-bright);
-  font-size: 10px;
+  color: var(--baul-red-bright) !important;
+  font-size: 10px !important;
 }
 
 .baul-subtitle .text {
-  font-family: var(--baul-font-title);
-  font-size: 14px;
-  letter-spacing: 5px;
-  color: var(--baul-text-muted);
-  text-transform: uppercase;
+  font-family: var(--baul-font-title) !important;
+  font-size: 14px !important;
+  letter-spacing: 5px !important;
+  color: var(--baul-text-muted) !important;
+  text-transform: uppercase !important;
 }
 
-/* CUERPO - 2 COLUMNAS */
+/* CUERPO - FLEXBOX PARA EVITAR PROBLEMAS CON GRID EN FOROACTIVO */
 .baul-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 20px !important;
+  width: 100% !important;
 }
 
 @media (max-width: 720px) {
   .baul-body {
-    grid-template-columns: 1fr;
+    flex-direction: column !important;
   }
 }
 
 /* COLUMNA IZQUIERDA: BOTONES */
 .baul-nav-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  flex: 1 1 50% !important;
+  width: 50% !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  align-content: flex-start !important;
 }
 
 .baul-btn {
-  display: flex;
-  align-items: center;
-  background-color: var(--baul-card-bg);
-  border: 1px solid var(--baul-border);
-  border-radius: 4px;
-  padding: 10px 12px;
+  display: flex !important;
+  align-items: center !important;
+  background-color: var(--baul-card-bg) !important;
+  border: 1px solid var(--baul-border) !important;
+  border-radius: 4px !important;
+  padding: 10px 12px !important;
   text-decoration: none !important;
   color: var(--baul-text-primary) !important;
-  transition: all 0.25s ease;
-  position: relative;
+  transition: all 0.25s ease !important;
+  position: relative !important;
+  width: calc(50% - 5px) !important;
+  box-sizing: border-box !important;
 }
 
 .baul-btn:hover {
-  background-color: rgba(107, 20, 26, 0.4);
-  border-color: var(--baul-red-bright);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(163, 34, 42, 0.25);
+  background-color: rgba(107, 20, 26, 0.4) !important;
+  border-color: var(--baul-red-bright) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(163, 34, 42, 0.25) !important;
 }
 
 .btn-icon {
-  width: 32px;
-  height: 32px;
-  background-color: var(--baul-red-main);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 13px;
-  margin-right: 10px;
-  flex-shrink: 0;
-  transition: transform 0.25s ease;
+  width: 32px !important;
+  height: 32px !important;
+  background-color: var(--baul-red-main) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  margin-right: 10px !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.25s ease !important;
 }
 
 .baul-btn:hover .btn-icon {
-  transform: scale(1.1);
-  background-color: var(--baul-red-bright);
+  transform: scale(1.1) !important;
+  background-color: var(--baul-red-bright) !important;
 }
 
 .btn-text {
-  font-family: var(--baul-font-title);
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  font-weight: 500;
-  text-transform: uppercase;
-  flex-grow: 1;
+  font-family: var(--baul-font-title) !important;
+  font-size: 13px !important;
+  letter-spacing: 1.5px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  flex-grow: 1 !important;
 }
 
 .btn-arrow {
-  font-size: 11px;
-  color: var(--baul-red-bright);
-  opacity: 0.6;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  font-size: 11px !important;
+  color: var(--baul-red-bright) !important;
+  opacity: 0.6 !important;
+  transition: transform 0.25s ease, opacity 0.25s ease !important;
 }
 
 .baul-btn:hover .btn-arrow {
-  opacity: 1;
-  transform: translateX(3px);
+  opacity: 1 !important;
+  transform: translateX(3px) !important;
 }
 
 .btn-full {
-  grid-column: span 2;
+  width: 100% !important;
 }
 
 /* COLUMNA DERECHA: DATOS PERSONALES */
 .baul-data-box {
-  background-color: var(--baul-card-bg);
-  border: 1px solid var(--baul-border);
-  border-radius: 4px;
-  padding: 20px 18px;
-  display: flex;
-  flex-direction: column;
+  flex: 1 1 50% !important;
+  width: 50% !important;
+  background-color: var(--baul-card-bg) !important;
+  border: 1px solid var(--baul-border) !important;
+  border-radius: 4px !important;
+  padding: 20px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .data-box-title {
-  font-family: var(--baul-font-title);
-  font-size: 16px;
-  letter-spacing: 3px;
-  text-align: center;
-  color: var(--baul-text-bright);
-  text-transform: uppercase;
+  font-family: var(--baul-font-title) !important;
+  font-size: 16px !important;
+  letter-spacing: 3px !important;
+  text-align: center !important;
+  color: var(--baul-text-bright) !important;
+  text-transform: uppercase !important;
 }
 
 .data-box-divider {
-  text-align: center;
-  color: var(--baul-red-bright);
-  font-size: 8px;
-  margin: 6px 0 15px 0;
+  text-align: center !important;
+  color: var(--baul-red-bright) !important;
+  font-size: 8px !important;
+  margin: 6px 0 15px 0 !important;
 }
 
 .data-list {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 11px !important;
 }
 
 .data-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 6px;
-  border-bottom: 1px dashed rgba(122, 34, 42, 0.3);
-  font-size: 13px;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-bottom: 6px !important;
+  border-bottom: 1px dashed rgba(122, 34, 42, 0.3) !important;
+  font-size: 13px !important;
 }
 
 .data-item:last-child {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 .data-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--baul-font-title);
-  letter-spacing: 1px;
-  color: var(--baul-text-muted);
-  font-size: 12px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-family: var(--baul-font-title) !important;
+  letter-spacing: 1px !important;
+  color: var(--baul-text-muted) !important;
+  font-size: 12px !important;
 }
 
 .data-label i {
-  color: var(--baul-red-bright);
-  width: 14px;
-  text-align: center;
-  font-size: 12px;
+  color: var(--baul-red-bright) !important;
+  width: 14px !important;
+  text-align: center !important;
+  font-size: 12px !important;
 }
 
 .data-value {
-  color: var(--baul-text-bright);
-  font-weight: 400;
-  text-align: right;
+  color: var(--baul-text-bright) !important;
+  font-weight: 400 !important;
+  text-align: right !important;
 }
 
 /* PIE / CITA */
 .baul-footer {
-  margin-top: 20px;
-  padding: 14px 10px;
-  border-top: 1px solid var(--baul-border);
-  text-align: center;
-  position: relative;
+  margin-top: 20px !important;
+  padding: 14px 10px !important;
+  border-top: 1px solid var(--baul-border) !important;
+  text-align: center !important;
+  position: relative !important;
 }
 
 .footer-quote {
-  font-family: var(--baul-font-title);
-  font-size: 13px;
-  letter-spacing: 4px;
-  color: var(--baul-text-muted);
-  text-transform: uppercase;
+  font-family: var(--baul-font-title) !important;
+  font-size: 13px !important;
+  letter-spacing: 4px !important;
+  color: var(--baul-text-muted) !important;
+  text-transform: uppercase !important;
 }
 
 .footer-star {
-  display: block;
-  margin-top: 6px;
-  color: var(--baul-red-bright);
-  font-size: 10px;
+  display: block !important;
+  margin-top: 6px !important;
+  color: var(--baul-red-bright) !important;
+  font-size: 10px !important;
 }
