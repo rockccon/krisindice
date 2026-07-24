@@ -1,5 +1,5 @@
 /* ===================================================
-   TABLILLA ÍNDICE DE BAÚL - ARCHIVO PERSONAL (FOROACTIVO)
+   TABLILLA ÍNDICE COMPACTA - FOROACTIVO
    =================================================== */
 
 :root {
@@ -16,7 +16,6 @@
   --baul-font-body: 'Roboto Condensed', sans-serif;
 }
 
-/* Reset básico */
 .baul-container, .baul-container * {
   box-sizing: border-box !important;
   margin: 0;
@@ -24,30 +23,29 @@
 }
 
 .baul-container p, .baul-container br {
-  margin: 0 !important;
-  padding: 0 !important;
+  display: none !important;
 }
 
 .baul-container {
   width: 100% !important;
-  max-width: 880px !important;
-  margin: 20px auto !important;
+  max-width: 680px !important;
+  margin: 10px auto !important;
   background-color: var(--baul-bg) !important;
   border: 1px solid var(--baul-border) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8) !important;
-  padding: 18px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8) !important;
+  padding: 12px !important;
   font-family: var(--baul-font-body) !important;
   color: var(--baul-text-primary) !important;
   display: block !important;
 }
 
-/* CABECERA */
+/* CABECERA COMPACTA */
 .baul-header {
   text-align: center !important;
-  padding: 30px 20px 20px 20px !important;
+  padding: 14px 10px 10px 10px !important;
   background: linear-gradient(180deg, rgba(80, 15, 22, 0.6) 0%, rgba(20, 18, 20, 0.4) 100%) !important;
   border: 1px solid var(--baul-border) !important;
-  margin-bottom: 20px !important;
+  margin-bottom: 10px !important;
   position: relative !important;
 }
 
@@ -58,66 +56,62 @@
   transform: translateX(-50%) !important;
   background-color: var(--baul-red-main) !important;
   color: #ffffff !important;
-  padding: 6px 14px 8px 14px !important;
+  padding: 3px 10px 4px 10px !important;
   clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%) !important;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  font-size: 10px !important;
 }
 
 .baul-title {
   font-family: var(--baul-font-title) !important;
-  font-size: 38px !important;
-  letter-spacing: 4px !important;
+  font-size: 24px !important;
+  letter-spacing: 3px !important;
   color: var(--baul-text-bright) !important;
   text-transform: uppercase !important;
-  margin-top: 10px !important;
+  margin-top: 4px !important;
 }
 
 .baul-subtitle {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 12px !important;
-  margin-top: 6px !important;
+  gap: 8px !important;
+  margin-top: 2px !important;
 }
 
 .baul-subtitle .line {
   height: 1px !important;
-  width: 60px !important;
+  width: 40px !important;
   background: linear-gradient(90deg, transparent, var(--baul-border-light), transparent) !important;
 }
 
 .baul-subtitle .star {
   color: var(--baul-red-bright) !important;
-  font-size: 10px !important;
+  font-size: 8px !important;
 }
 
 .baul-subtitle .text {
   font-family: var(--baul-font-title) !important;
-  font-size: 13px !important;
-  letter-spacing: 4px !important;
+  font-size: 11px !important;
+  letter-spacing: 3px !important;
   color: var(--baul-text-muted) !important;
   text-transform: uppercase !important;
 }
 
-/* ESTRUCTURA PRINCIPAL (2 COLUMNAS DE 50%) */
+/* CUERPO COMPACTO (FLEX2 COLUMNAS) */
 .baul-body {
   display: flex !important;
-  flex-direction: row !important;
-  gap: 16px !important;
+  gap: 10px !important;
   width: 100% !important;
-  align-items: flex-start !important;
+  align-items: stretch !important;
 }
 
-/* COLUMNA IZQUIERDA: BOTONES (MATRIZ DE 2 COLUMNAS) */
+/* BOTONES (6 BOTONES EN 2 COLUMNAS) */
 .baul-nav-grid {
   flex: 1 1 50% !important;
-  width: 50% !important;
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
-  gap: 10px !important;
+  gap: 6px !important;
+  align-content: start !important;
 }
 
 .baul-btn {
@@ -125,94 +119,81 @@
   align-items: center !important;
   background-color: var(--baul-card-bg) !important;
   border: 1px solid var(--baul-border) !important;
-  border-radius: 4px !important;
-  padding: 10px 10px !important;
+  border-radius: 3px !important;
+  padding: 6px 8px !important;
   text-decoration: none !important;
   color: var(--baul-text-primary) !important;
-  transition: all 0.25s ease !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
+  transition: all 0.2s ease !important;
 }
 
 .baul-btn:hover {
   background-color: rgba(107, 20, 26, 0.4) !important;
   border-color: var(--baul-red-bright) !important;
-  transform: translateY(-2px) !important;
 }
 
 .btn-icon {
-  width: 30px !important;
-  height: 30px !important;
+  width: 22px !important;
+  height: 22px !important;
   background-color: var(--baul-red-main) !important;
   border-radius: 50% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   color: #ffffff !important;
-  font-size: 12px !important;
-  margin-right: 8px !important;
+  font-size: 10px !important;
+  margin-right: 6px !important;
   flex-shrink: 0 !important;
 }
 
 .btn-text {
   font-family: var(--baul-font-title) !important;
-  font-size: 12px !important;
+  font-size: 11px !important;
   letter-spacing: 1px !important;
-  font-weight: 500 !important;
   text-transform: uppercase !important;
   flex-grow: 1 !important;
 }
 
 .btn-arrow {
-  font-size: 10px !important;
+  font-size: 9px !important;
   color: var(--baul-red-bright) !important;
   opacity: 0.6 !important;
 }
 
-/* BOTÓN ANCHO DEL FINAL */
-.btn-full {
-  grid-column: span 2 !important;
-}
-
-/* COLUMNA DERECHA: DATOS PERSONALES */
+/* CAJA DE DATOS COMPACTA */
 .baul-data-box {
   flex: 1 1 50% !important;
-  width: 50% !important;
   background-color: var(--baul-card-bg) !important;
   border: 1px solid var(--baul-border) !important;
-  border-radius: 4px !important;
-  padding: 18px 16px !important;
+  border-radius: 3px !important;
+  padding: 10px 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
 }
 
 .data-box-title {
   font-family: var(--baul-font-title) !important;
-  font-size: 16px !important;
-  letter-spacing: 3px !important;
+  font-size: 13px !important;
+  letter-spacing: 2px !important;
   text-align: center !important;
   color: var(--baul-text-bright) !important;
   text-transform: uppercase !important;
-}
-
-.data-box-divider {
-  text-align: center !important;
-  color: var(--baul-red-bright) !important;
-  font-size: 8px !important;
-  margin: 4px 0 12px 0 !important;
+  margin-bottom: 6px !important;
 }
 
 .data-list {
   display: flex !important;
   flex-direction: column !important;
-  gap: 10px !important;
+  gap: 3px !important;
 }
 
 .data-item {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-  padding-bottom: 5px !important;
-  border-bottom: 1px dashed rgba(122, 34, 42, 0.3) !important;
-  font-size: 12px !important;
+  padding: 2px 0 !important;
+  border-bottom: 1px dashed rgba(122, 34, 42, 0.2) !important;
+  font-size: 11px !important;
 }
 
 .data-item:last-child {
@@ -222,44 +203,35 @@
 .data-label {
   display: flex !important;
   align-items: center !important;
-  gap: 6px !important;
+  gap: 5px !important;
   font-family: var(--baul-font-title) !important;
-  letter-spacing: 1px !important;
+  letter-spacing: 0.5px !important;
   color: var(--baul-text-muted) !important;
-  font-size: 11px !important;
+  font-size: 10px !important;
 }
 
 .data-label i {
   color: var(--baul-red-bright) !important;
-  width: 14px !important;
+  width: 12px !important;
   text-align: center !important;
 }
 
 .data-value {
   color: var(--baul-text-bright) !important;
-  font-weight: 400 !important;
-  text-align: right !important;
 }
 
-/* FOOTER */
+/* PIE */
 .baul-footer {
-  margin-top: 20px !important;
-  padding-top: 14px !important;
+  margin-top: 10px !important;
+  padding-top: 8px !important;
   border-top: 1px solid var(--baul-border) !important;
   text-align: center !important;
 }
 
 .footer-quote {
   font-family: var(--baul-font-title) !important;
-  font-size: 12px !important;
-  letter-spacing: 3px !important;
+  font-size: 11px !important;
+  letter-spacing: 2px !important;
   color: var(--baul-text-muted) !important;
   text-transform: uppercase !important;
-}
-
-.footer-star {
-  display: block !important;
-  margin-top: 4px !important;
-  color: var(--baul-red-bright) !important;
-  font-size: 10px !important;
 }
