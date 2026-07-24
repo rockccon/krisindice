@@ -42,11 +42,15 @@
 /* CABECERA COMPACTA */
 .baul-header {
   text-align: center !important;
-  padding: 14px 10px 10px 10px !important;
+  padding: 22px 10px 12px 10px !important;
   background: linear-gradient(180deg, rgba(80, 15, 22, 0.6) 0%, rgba(20, 18, 20, 0.4) 100%) !important;
   border: 1px solid var(--baul-border) !important;
   margin-bottom: 10px !important;
   position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .baul-badge {
@@ -56,21 +60,27 @@
   transform: translateX(-50%) !important;
   background-color: var(--baul-red-main) !important;
   color: #ffffff !important;
-  padding: 3px 10px 4px 10px !important;
+  padding: 6px 14px 8px 14px !important;
   clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%) !important;
-  font-size: 10px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 2 !important;
 }
 
 .baul-title {
   font-family: var(--baul-font-title) !important;
-  font-size: 18px !important;
-  line-height: 1.1 !important;
+  font-size: 20px !important;
+  line-height: 1.2 !important;
   letter-spacing: 2px !important;
   color: var(--baul-text-bright) !important;
   text-transform: uppercase !important;
-  margin-top: 4px !important;
-  margin-bottom: 6px !important;
+  margin: 12px 0 6px 0 !important;
+  position: relative !important;
+  top: 0 !important;
   display: block !important;
+  height: auto !important;
 }
 
 .baul-subtitle {
@@ -78,13 +88,10 @@
   align-items: center !important;
   justify-content: center !important;
   gap: 8px !important;
-  margin-top: 2px !important;
-}
-
-.baul-subtitle .line {
-  height: 1px !important;
-  width: 40px !important;
-  background: linear-gradient(90deg, transparent, var(--baul-border-light), transparent) !important;
+  margin-top: 0 !important;
+  position: relative !important;
+  top: 0 !important;
+  clear: both !important;
 }
 
 .baul-subtitle .star {
