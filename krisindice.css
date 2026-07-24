@@ -71,7 +71,7 @@
 
 .baul-title {
   font-family: var(--baul-font-title) !important;
-  font-size: 26px !important;
+  font-size: 20px !important;
   line-height: normal !important; /* Permite que la fuente respire y calcule bien su alto */
   letter-spacing: 3px !important;
   color: var(--baul-text-bright) !important;
