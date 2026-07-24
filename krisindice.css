@@ -71,16 +71,15 @@
 
 .baul-title {
   font-family: var(--baul-font-title) !important;
-  font-size: 20px !important;
-  line-height: 1.2 !important;
-  letter-spacing: 2px !important;
+  font-size: 26px !important;
+  line-height: normal !important; /* Permite que la fuente respire y calcule bien su alto */
+  letter-spacing: 3px !important;
   color: var(--baul-text-bright) !important;
   text-transform: uppercase !important;
-  margin: 12px 0 6px 0 !important;
-  position: relative !important;
-  top: 0 !important;
+  margin-top: 15px !important; /* Espacio para que no choque con la placa roja */
+  margin-bottom: 15px !important; /* ESTE ES EL MARGEN CLAVE: Empuja el subtítulo hacia abajo */
   display: block !important;
-  height: auto !important;
+  text-align: center !important;
 }
 
 .baul-subtitle {
@@ -89,8 +88,8 @@
   justify-content: center !important;
   gap: 8px !important;
   margin-top: 0 !important;
+  padding-bottom: 5px !important; /* Un respiro extra por debajo */
   position: relative !important;
-  top: 0 !important;
   clear: both !important;
 }
 
